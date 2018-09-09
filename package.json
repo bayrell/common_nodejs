@@ -9,6 +9,6 @@
 	"*.js"
   ],
   "main": "index.js",
-  "name": "bayrell-common",
+  "name": "bayrell-common-nodejs",
   "version": "0.4.2"
 }
