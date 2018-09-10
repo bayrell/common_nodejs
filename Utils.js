@@ -16,14 +16,14 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-var rtl = require('BayrellRuntime').rtl;
-var Map = require('BayrellRuntime').Map;
-var Vector = require('BayrellRuntime').Vector;
-var rs = require('BayrellRuntime').rs;
-var ContextObject = require('BayrellRuntime').ContextObject;
-var CoreObject = require('BayrellRuntime').CoreObject;
-var ContextInterface = require('BayrellRuntime').Interfaces.ContextInterface;
-var FactoryInterface = require('BayrellRuntime').Interfaces.FactoryInterface;
+var rtl = require('bayrell-runtime-nodejs').rtl;
+var Map = require('bayrell-runtime-nodejs').Map;
+var Vector = require('bayrell-runtime-nodejs').Vector;
+var rs = require('bayrell-runtime-nodejs').rs;
+var ContextObject = require('bayrell-runtime-nodejs').ContextObject;
+var CoreObject = require('bayrell-runtime-nodejs').CoreObject;
+var ContextInterface = require('bayrell-runtime-nodejs').Interfaces.ContextInterface;
+var FactoryInterface = require('bayrell-runtime-nodejs').Interfaces.FactoryInterface;
 var AssertError = require('./Exceptions/AssertError.js');
 var PathInfo = require('./Types/PathInfo.js');
 class Utils{

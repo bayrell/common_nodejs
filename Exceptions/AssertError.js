@@ -16,14 +16,14 @@
  *  See the License for the specific language governing permissions and
  *  limitations under the License.
  */
-var rtl = require('BayrellRuntime').rtl;
-var Map = require('BayrellRuntime').Map;
-var Vector = require('BayrellRuntime').Vector;
-var rtl = require('BayrellRuntime').rtl;
-var Utils = require('BayrellRuntime').Utils;
-var RuntimeConstant = require('BayrellRuntime').RuntimeConstant;
-var RuntimeException = require('BayrellRuntime').Exceptions.RuntimeException;
-var ContextInterface = require('BayrellRuntime').Interfaces.ContextInterface;
+var rtl = require('bayrell-runtime-nodejs').rtl;
+var Map = require('bayrell-runtime-nodejs').Map;
+var Vector = require('bayrell-runtime-nodejs').Vector;
+var rtl = require('bayrell-runtime-nodejs').rtl;
+var Utils = require('bayrell-runtime-nodejs').Utils;
+var RuntimeConstant = require('bayrell-runtime-nodejs').RuntimeConstant;
+var RuntimeException = require('bayrell-runtime-nodejs').Exceptions.RuntimeException;
+var ContextInterface = require('bayrell-runtime-nodejs').Interfaces.ContextInterface;
 class AssertError extends RuntimeException{
 	getClassName(){return "BayrellCommon.Exceptions.AssertError";}
 	static getParentClassName(){return "RuntimeException";}
