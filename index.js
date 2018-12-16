@@ -16,9 +16,50 @@
  *  limitations under the License.
  */
 
+if (false){
+
+function ObjectAssign(res, obj){
+	for (var key in obj){
+		if (res[key] == undefined) res[key] = obj[key];
+		else if (res[key] instanceof Object) ObjectAssign(res[key], obj[key]);
+	}
+}
 
 module.exports = {
-	VERSION: '0.4.0',
+	VERSION: '0.6.0',
+};
+
+/* Exceptions */
+ObjectAssign(module.exports, require("./Exceptions/AssertError.js"));
+
+/* FileSystem */
+ObjectAssign(module.exports, require("./FileSystem/FileInterface.js"));
+ObjectAssign(module.exports, require("./FileSystem/FileSystemInterface.js"));
+
+/* Providers */
+ObjectAssign(module.exports, require("./Providers/AssertInterface.js"));
+ObjectAssign(module.exports, require("./Providers/LogInterface.js"));
+ObjectAssign(module.exports, require("./Providers/SerializeStringInterface.js"));
+ObjectAssign(module.exports, require("./Providers/TranslateInterface.js"));
+
+/* System */
+ObjectAssign(module.exports, require("./System/StreamInterface.js"));
+ObjectAssign(module.exports, require("./System/StreamReader.js"));
+
+/* Types */
+ObjectAssign(module.exports, require("./Types/PathInfo.js"));
+ObjectAssign(module.exports, require("./Types/Pipe.js"));
+
+/* Root */
+ObjectAssign(module.exports, require("./CommonConstant.js"));
+ObjectAssign(module.exports, require("./Utils.js"));
+
+
+}
+else{
+
+module.exports = {
+	VERSION: '0.6.0',
 	'Exceptions': {
 		'AssertError': require("./Exceptions/AssertError.js"),
 	},
@@ -44,4 +85,4 @@ module.exports = {
 	'Utils': require("./Utils.js"),
 };
 
-
+}

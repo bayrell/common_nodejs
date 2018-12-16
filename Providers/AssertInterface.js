@@ -19,6 +19,7 @@
 var rtl = require('bayrell-runtime-nodejs').rtl;
 var Map = require('bayrell-runtime-nodejs').Map;
 var Vector = require('bayrell-runtime-nodejs').Vector;
+var IntrospectionInfo = require('bayrell-runtime-nodejs').IntrospectionInfo;
 /**
  * Provider "default:assert" 
  */
@@ -83,5 +84,6 @@ class AssertInterface{
 		if (message == undefined) message="";
 		if (prev == undefined) prev=null;
 	}
+	/* ======================= Class Init Functions ======================= */
 }
 module.exports = AssertInterface;

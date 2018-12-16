@@ -19,8 +19,16 @@
 var rtl = require('bayrell-runtime-nodejs').rtl;
 var Map = require('bayrell-runtime-nodejs').Map;
 var Vector = require('bayrell-runtime-nodejs').Vector;
+var IntrospectionInfo = require('bayrell-runtime-nodejs').IntrospectionInfo;
 var StringInterface = require('bayrell-runtime-nodejs').Interfaces.StringInterface;
 class PathInfo{
+	/**
+	 * Returns string
+	 */
+	toString(){
+		return this.filepath;
+	}
+	/* ======================= Class Init Functions ======================= */
 	getClassName(){return "BayrellCommon.Types.PathInfo";}
 	static getParentClassName(){return "";}
 	_init(){
@@ -31,12 +39,6 @@ class PathInfo{
 		this.filename = "";
 		if (this.__implements__ == undefined){this.__implements__ = [];}
 		this.__implements__.push(StringInterface);
-	}
-	/**
-	 * Returns string
-	 */
-	toString(){
-		return this.filepath;
 	}
 }
 PathInfo.__static_implements__ = [];

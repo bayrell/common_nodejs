@@ -19,6 +19,7 @@
 var rtl = require('bayrell-runtime-nodejs').rtl;
 var Map = require('bayrell-runtime-nodejs').Map;
 var Vector = require('bayrell-runtime-nodejs').Vector;
+var IntrospectionInfo = require('bayrell-runtime-nodejs').IntrospectionInfo;
 var rs = require('bayrell-runtime-nodejs').rs;
 var ContextObject = require('bayrell-runtime-nodejs').ContextObject;
 var CoreObject = require('bayrell-runtime-nodejs').CoreObject;
@@ -27,8 +28,6 @@ var FactoryInterface = require('bayrell-runtime-nodejs').Interfaces.FactoryInter
 var AssertError = require('./Exceptions/AssertError.js');
 var PathInfo = require('./Types/PathInfo.js');
 class Utils{
-	getClassName(){return "BayrellCommon.Utils";}
-	static getParentClassName(){return "";}
 	/**
 	 * Equals value1 and value2. Throw exception if value1 != value2
 	 * @param var value1
@@ -59,7 +58,7 @@ class Utils{
 		ret.dirname = rs.implode("/", arr2);
 		var ext_length = rs.strlen(ret.extension);
 		if (ext_length > 0){
-			ext_length++
+			ext_length++;
 		}
 		ret.filename = rs.substr(ret.basename, 0, -1 * ext_length);
 		return ret;
@@ -121,5 +120,8 @@ class Utils{
 		});
 		return rs.implode(ch, source);
 	}
+	/* ======================= Class Init Functions ======================= */
+	getClassName(){return "BayrellCommon.Utils";}
+	static getParentClassName(){return "";}
 }
 module.exports = Utils;

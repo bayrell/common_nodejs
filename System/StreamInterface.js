@@ -19,6 +19,7 @@
 var rtl = require('bayrell-runtime-nodejs').rtl;
 var Map = require('bayrell-runtime-nodejs').Map;
 var Vector = require('bayrell-runtime-nodejs').Vector;
+var IntrospectionInfo = require('bayrell-runtime-nodejs').IntrospectionInfo;
 class StreamInterface{
 	/**
 	 * Returns if can read from stream
@@ -72,5 +73,6 @@ class StreamInterface{
 	 */
 	writeBytes(data){
 	}
+	/* ======================= Class Init Functions ======================= */
 }
 module.exports = StreamInterface;

@@ -19,6 +19,7 @@
 var rtl = require('bayrell-runtime-nodejs').rtl;
 var Map = require('bayrell-runtime-nodejs').Map;
 var Vector = require('bayrell-runtime-nodejs').Vector;
+var IntrospectionInfo = require('bayrell-runtime-nodejs').IntrospectionInfo;
 /**
  * Provider "default:translate" 
  */
@@ -42,5 +43,6 @@ class TranslateInterface{
 		if (params == undefined) params=null;
 		if (locale == undefined) locale="";
 	}
+	/* ======================= Class Init Functions ======================= */
 }
 module.exports = TranslateInterface;

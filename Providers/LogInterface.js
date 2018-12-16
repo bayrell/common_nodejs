@@ -19,6 +19,7 @@
 var rtl = require('bayrell-runtime-nodejs').rtl;
 var Map = require('bayrell-runtime-nodejs').Map;
 var Vector = require('bayrell-runtime-nodejs').Vector;
+var IntrospectionInfo = require('bayrell-runtime-nodejs').IntrospectionInfo;
 /**
  * Provider "default:log" 
  */
@@ -33,5 +34,6 @@ class LogInterface{
 	 */
 	logException(level, module_name, e){
 	}
+	/* ======================= Class Init Functions ======================= */
 }
 module.exports = LogInterface;

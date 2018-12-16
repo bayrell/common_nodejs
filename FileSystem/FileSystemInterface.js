@@ -19,6 +19,7 @@
 var rtl = require('bayrell-runtime-nodejs').rtl;
 var Map = require('bayrell-runtime-nodejs').Map;
 var Vector = require('bayrell-runtime-nodejs').Vector;
+var IntrospectionInfo = require('bayrell-runtime-nodejs').IntrospectionInfo;
 class FileSystemInterface{
 	/**
 	 * Returns files and folders from directory
@@ -91,5 +92,6 @@ class FileSystemInterface{
 	 */
 	isDir(path){
 	}
+	/* ======================= Class Init Functions ======================= */
 }
 module.exports = FileSystemInterface;

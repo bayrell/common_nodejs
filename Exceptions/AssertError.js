@@ -19,20 +19,22 @@
 var rtl = require('bayrell-runtime-nodejs').rtl;
 var Map = require('bayrell-runtime-nodejs').Map;
 var Vector = require('bayrell-runtime-nodejs').Vector;
+var IntrospectionInfo = require('bayrell-runtime-nodejs').IntrospectionInfo;
 var rtl = require('bayrell-runtime-nodejs').rtl;
 var Utils = require('bayrell-runtime-nodejs').Utils;
 var RuntimeConstant = require('bayrell-runtime-nodejs').RuntimeConstant;
 var RuntimeException = require('bayrell-runtime-nodejs').Exceptions.RuntimeException;
 var ContextInterface = require('bayrell-runtime-nodejs').Interfaces.ContextInterface;
 class AssertError extends RuntimeException{
-	getClassName(){return "BayrellCommon.Exceptions.AssertError";}
-	static getParentClassName(){return "RuntimeException";}
-	constructor(context, message, prev){
+	constructor(message, context, prev){
 		if (prev == undefined) prev=null;
 		if (message == ""){
 			message = Utils.translate("ERROR_ASSERT", null, "", context);
 		}
-		super(context, message, RuntimeConstant.ERROR_ASSERT, prev);
+		super(message, RuntimeConstant.ERROR_ASSERT, context, prev);
 	}
+	/* ======================= Class Init Functions ======================= */
+	getClassName(){return "BayrellCommon.Exceptions.AssertError";}
+	static getParentClassName(){return "RuntimeException";}
 }
 module.exports = AssertError;

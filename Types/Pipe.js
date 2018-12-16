@@ -19,14 +19,9 @@
 var rtl = require('bayrell-runtime-nodejs').rtl;
 var Map = require('bayrell-runtime-nodejs').Map;
 var Vector = require('bayrell-runtime-nodejs').Vector;
+var IntrospectionInfo = require('bayrell-runtime-nodejs').IntrospectionInfo;
 var CoreObject = require('bayrell-runtime-nodejs').CoreObject;
 class Pipe extends CoreObject{
-	getClassName(){return "BayrellCommon.Types.Pipe";}
-	static getParentClassName(){return "CoreObject";}
-	_init(){
-		super._init();
-		this.pipe = null;
-	}
 	/**
 	 * Constructor
 	 */
@@ -81,6 +76,13 @@ class Pipe extends CoreObject{
 		return this.pipe.reduce((res, item) => {
 			return item(res);
 		}, obj);
+	}
+	/* ======================= Class Init Functions ======================= */
+	getClassName(){return "BayrellCommon.Types.Pipe";}
+	static getParentClassName(){return "CoreObject";}
+	_init(){
+		super._init();
+		this.pipe = null;
 	}
 }
 module.exports = Pipe;

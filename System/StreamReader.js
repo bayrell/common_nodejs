@@ -19,15 +19,9 @@
 var rtl = require('bayrell-runtime-nodejs').rtl;
 var Map = require('bayrell-runtime-nodejs').Map;
 var Vector = require('bayrell-runtime-nodejs').Vector;
+var IntrospectionInfo = require('bayrell-runtime-nodejs').IntrospectionInfo;
 var CoreObject = require('bayrell-runtime-nodejs').CoreObject;
 class StreamReader extends CoreObject{
-	getClassName(){return "BayrellCommon.System.StreamReader";}
-	static getParentClassName(){return "CoreObject";}
-	_init(){
-		super._init();
-		this.stream = null;
-		this.charset = "utf8";
-	}
 	/**
 	 * Create object
 	 */
@@ -64,7 +58,7 @@ class StreamReader extends CoreObject{
 		var i = 0;
 		while (!this.stream.isEOF() && i < length){
 			s += this.readChar();
-			i++
+			i++;
 		}
 		return s;
 	}
@@ -93,6 +87,14 @@ class StreamReader extends CoreObject{
 		}
 		var s = Utils.bytesToString(res, this.charset);
 		return s;
+	}
+	/* ======================= Class Init Functions ======================= */
+	getClassName(){return "BayrellCommon.System.StreamReader";}
+	static getParentClassName(){return "CoreObject";}
+	_init(){
+		super._init();
+		this.stream = null;
+		this.charset = "utf8";
 	}
 }
 module.exports = StreamReader;
