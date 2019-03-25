@@ -26,7 +26,7 @@ function ObjectAssign(res, obj){
 }
 
 module.exports = {
-	VERSION: '0.6.0',
+	VERSION: '0.7.1',
 };
 
 /* Exceptions */
@@ -59,7 +59,7 @@ ObjectAssign(module.exports, require("./Utils.js"));
 else{
 
 module.exports = {
-	VERSION: '0.6.0',
+	VERSION: '0.7.1',
 	'Exceptions': {
 		'AssertError': require("./Exceptions/AssertError.js"),
 	},
