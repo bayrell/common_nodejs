@@ -36,6 +36,5 @@ class LogInterface{
 	 */
 	logException(level, module_name, e){
 	}
-	/* ======================= Class Init Functions ======================= */
 }
 module.exports = LogInterface;

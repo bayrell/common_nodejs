@@ -45,6 +45,5 @@ class TranslateInterface{
 		if (params == undefined) params=null;
 		if (locale == undefined) locale="";
 	}
-	/* ======================= Class Init Functions ======================= */
 }
 module.exports = TranslateInterface;

@@ -86,6 +86,5 @@ class AssertInterface{
 		if (message == undefined) message="";
 		if (prev == undefined) prev=null;
 	}
-	/* ======================= Class Init Functions ======================= */
 }
 module.exports = AssertInterface;

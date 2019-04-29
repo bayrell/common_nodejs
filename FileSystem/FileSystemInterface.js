@@ -94,6 +94,5 @@ class FileSystemInterface{
 	 */
 	isDir(path){
 	}
-	/* ======================= Class Init Functions ======================= */
 }
 module.exports = FileSystemInterface;

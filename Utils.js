@@ -126,5 +126,16 @@ class Utils{
 	getClassName(){return "BayrellCommon.Utils";}
 	static getCurrentClassName(){return "BayrellCommon.Utils";}
 	static getParentClassName(){return "";}
+	static getFieldsList(names, flag){
+		if (flag==undefined)flag=0;
+	}
+	static getFieldInfoByName(field_name){
+		return null;
+	}
+	static getMethodsList(names){
+	}
+	static getMethodInfoByName(method_name){
+		return null;
+	}
 }
 module.exports = Utils;

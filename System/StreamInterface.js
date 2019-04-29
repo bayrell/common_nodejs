@@ -75,6 +75,5 @@ class StreamInterface{
 	 */
 	writeBytes(data){
 	}
-	/* ======================= Class Init Functions ======================= */
 }
 module.exports = StreamInterface;

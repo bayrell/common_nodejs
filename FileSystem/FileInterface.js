@@ -38,6 +38,5 @@ class FileInterface{
 	 */
 	close(){
 	}
-	/* ======================= Class Init Functions ======================= */
 }
 module.exports = FileInterface;

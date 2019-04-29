@@ -83,6 +83,5 @@ class SerializeStringInterface{
 	 */
 	getCRLF(){
 	}
-	/* ======================= Class Init Functions ======================= */
 }
 module.exports = SerializeStringInterface;
